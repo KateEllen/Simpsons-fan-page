@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+    padding: 10px 4px;
+    margin: 0 0 20px 0;
+    background: #107DC0;;
+    
+}
+
+footer {
+    font-size: 15px;
+    color: #000000;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #107DC0;
+    -webkit-box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+  }
+
+  body {
+    background: #FFD521
+  }

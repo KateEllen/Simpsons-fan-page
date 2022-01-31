@@ -45,3 +45,16 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+    
+    
+class Characters(models.Model):
+    name = models.CharField(max_length=200)
+    image = CloudinaryField('image', default='placeholder')
+    bio = models.TextField()
+    tag_lines = models.TextField()
+    
+    class Meta: 
+        ordering =['name']
+        
+    def __str__(self):
+        return self.name

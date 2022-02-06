@@ -6,6 +6,7 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
   
+    prepopulated_fields = {'slug':('title',)}
     list_filter = ('status', 'created_on', 'title')
     search_fileds = ['title', 'content']
     summernote_fields = ('content')
@@ -14,7 +15,7 @@ class PostAdmin(SummernoteModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
-    search_fileds = ('name', 'email', 'body')
+    search_fileds = ('name', 'body')
     actions = ['approve_comments']
     
     def approve_comments(self, request, queryset):

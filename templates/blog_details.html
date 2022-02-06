@@ -2,10 +2,32 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
+
 <h1>{{ post.title }}</h1>
 <small>By: {{ post.author }}</small>
 <hr>
 <br/>
-{{ post.content }}
+{{ post.content | safe }}
+<br/><br/>
 
+
+<h2>Comments</h2>
+
+{% if user.is_authenticated %}
+
+
+
+
+<h3>Leave a comment:</h3>
+ 
+<p>Posting as {{ user.username }}</p>
+<form method="post" style="margin-top: 1.3em;">
+    {{ comment_form | crispy }}
+    {% csrf_token %}
+    <button type=""submit>Submit</button>
+
+</form>   
+  
+    {% endif %}
 {% endblock %}

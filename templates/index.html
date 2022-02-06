@@ -1,12 +1,11 @@
+
 {% extends "base.html" %}
 
 {% block content %}
 
 <div class="container-fluid">
     <div class="row">
-        <h1> Welcome Simposons fans!</h1>
-        <p> “Marge, you're my wife of ten years and I love you, but I must observe the teachings of this blog I just saw tonight.” - Homer Simpson</p>
-
+<h1>Me write blog? That's umpossible</h1>
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
@@ -25,7 +24,7 @@
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
+                            <a href="{% url 'blog_detail' post.pk %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
@@ -59,3 +58,6 @@
     {% endif %}
 </div>
 {%endblock%}
+
+       
+

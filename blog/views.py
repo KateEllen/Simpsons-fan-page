@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import Post
+from .forms import CommentForm
 
 
 class HomeView(ListView):
@@ -13,3 +14,5 @@ class HomeView(ListView):
 class BlogDetailView(DetailView):
     model = Post
     template_name = 'blog_details.html'
+    
+

@@ -14,10 +14,12 @@
 
 <h2>Comments</h2>
 
+{% if commented %}
+<div class="alert alert-success" role="alerts">
+    Your comment is awaiting approval
+</div>
+{% else %}
 {% if user.is_authenticated %}
-
-
-
 
 <h3>Leave a comment:</h3>
  
@@ -28,6 +30,7 @@
     <button type=""submit>Submit</button>
 
 </form>   
-  
+    
     {% endif %}
-{% endblock %}
+    {% endif %}
+{% endblock %} 

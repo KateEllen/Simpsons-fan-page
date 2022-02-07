@@ -9,7 +9,3 @@ class CommentForm(forms.ModelForm):
         fields = ('body',)
 
 
-class CharacterForm(forms.ModelForm):
-    class Meta:
-        model = Characters
-        fields = ('body',)

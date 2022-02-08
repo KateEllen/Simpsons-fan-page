@@ -4,6 +4,7 @@ from django.views.generic import ListView, DetailView, CreateView
 from .models import Post, Comment 
 from .models import Characters
 from .forms import CommentForm
+from django.urls import reverse_lazy
 
 
 class HomeView(ListView):
@@ -42,8 +43,14 @@ class PostDetail(View):
 
 class AddCommentView(CreateView):
     model = Comment
+    form_class = CommentForm
     template_name = 'add_comment.html'
-    fields = '__all__'
+    success_url = reverse_lazy('home')
+    
+    def form_valid(self, form):
+        form.instance.post_id = self.kwargs['pk']
+        return super().form_valid(form)
+        
 
 
 class CharacterDetail(View):

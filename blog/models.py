@@ -24,8 +24,8 @@ class Post(models.Model):
     class Meta:
         ordering = ["-created_on"]
 
-    def __str__(self):
-        return self.title
+        def __str__(self):
+            return self.title
 
     def number_of_likes(self):
         return self.likes.count()
@@ -38,8 +38,9 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
-def __str__(self):
-    return'%s -%s' % (self.post.title, self.name)
+    def __str__(self):
+        return'%s -%s' % (self.post.title, self.name)
+
 
 class Characters(models.Model):
     name = models.CharField(max_length=200)
@@ -50,5 +51,5 @@ class Characters(models.Model):
     class Meta:
         ordering = ['name']
 
-    def __str__(self):
-        return self.name
+        def __str__(self):
+            return self.name

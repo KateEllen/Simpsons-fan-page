@@ -24,11 +24,11 @@ class Post(models.Model):
     class Meta:
         ordering = ["-created_on"]
 
-        def __str__(self):
-            return self.title
+    def __str__(self):
+        return self.title
 
     def number_of_likes(self):
-        return self.likes.count()
+        return self.likes.count()  # noqa
 
 
 class Comment(models.Model):
@@ -51,5 +51,9 @@ class Characters(models.Model):
     class Meta:
         ordering = ['name']
 
+        def __init__(self):
+            self.name = ""
+            
         def __str__(self):
             return self.name
+        

@@ -9,7 +9,7 @@ body {
 }
 
 main {
-  min-height: calc(100vh - 270px);
+  min-height: calc(100vh - 370px);
 }
 
 .donut-container {

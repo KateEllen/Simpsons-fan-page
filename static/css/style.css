@@ -1,36 +1,136 @@
-.nav-item {
-  font: #FFFF;
+:root {
+  --yellow: #FFD521;
+  --blue: #107DC0;
+  --black: #1D1D1D;
 }
 
+body {
+  background: var(--yellow);
+}
+
+main {
+  min-height: calc(100vh - 270px);
+}
+
+.donut-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.donut-container > a > img {
+  height: 100px;
+  animation: spin 10s linear infinite;
+} 
+
 h1 {
-    text-align: center;
-    padding: 10px 4px;
-    margin: 0 0 20px 0;
-    background: #107DC0;;
-    
+  text-align: center;
+  padding: 10px 4px;
+  margin: 0 0 20px 0;
+  background: var(--blue);
 }
 
 footer {
-    font-size: 15px;
-    color: #000000;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background: #107DC0;
-    -webkit-box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+  position: relative;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: var(--yellow);
+  width: 100%;
+  background: var(--black);
+  -webkit-box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+}
+
+.kang {
+  position: absolute;
+  top: -110px;
+  right: 70px;
+  height: 150px;
+}
+
+
+
+.hero-image {
+  height: 600px;
+  width: 100%;
+  background: url("/media/simpsons-home.png");
+}
+
+
+.blog-card {
+  min-height: 270px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card > h3 {
+  color: var(--black);
+  font-size: 1.8rem;
+}
+
+.blog-card > p {
+  color: var(--black);
+}
+
+.blog-card > a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.blog-card > a:hover {
+  text-decoration: underline;
+  color: var(--blue);
+}
+
+.blog-card-footer {
+  margin-top: auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 8px;
+}
+
+.blog-card-footer > p {
+  margin: 0;
+}
+
+.blog-card-footer > p + p {
+  margin-top: 4px;
+}
+
+.custom-nav-outer {
+  background-color: var(--black);
+  -webkit-box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.7);
+}
+
+.custom-nav {
+  display: flex;
+  height: 70px;
+  justify-content: space-evenly;
+align-items: center;
+}
+
+.custom-nav > a {
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: var(--yellow);
+}
+
+.custom-nav > a.active {
+  text-decoration: underline;
+  color: var(--yellow);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
   }
-
-  body {
-    background: #FFD521
+  100% {
+    transform: rotateZ(360deg);
   }
-
-  .hero-image {
-
-    height: 600px;
-    width: 100%;
-    background: url("/media/simpsons-home.png");
-    
 }

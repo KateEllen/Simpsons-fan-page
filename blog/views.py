@@ -4,7 +4,8 @@ from django.views.generic import ListView, DetailView, CreateView
 from .models import Post, Comment 
 from .models import Characters
 from .forms import CommentForm
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
+from django.http import HttpResponseRedirect
 
 
 class HomeView(ListView):
@@ -41,6 +42,7 @@ class PostDetail(View):
             },
         )
 
+
 class AddCommentView(CreateView):
     model = Comment
     form_class = CommentForm
@@ -57,3 +59,15 @@ class CharacterDetail(View):
     model = Characters
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "characters.html"
+
+
+class PostLike(View):
+    
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('blog_detail', args=[slug]))

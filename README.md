@@ -4,10 +4,30 @@
 Kate_Ellen
 
 ## Project Overview 
+This project has been created for educational purposes. 
 
+This blog is about all things Simpson's. You can read blog posts and comments, and interact once you're a user. 
 
-### Flow Chart 
+### Wire Frames 
 
+## User Experience 
+
+## Project Goals
+
+The goal of this project is to create blog page, where people can start a conversation. 
+This project is for educational purposes only.
+
+### Importance and Feasibility chart
+
+| Opportunity/Problem                                                    | Importance | Viability/Feasibility |
+| :--------------------------------------------------------------------- | :--------: | :-------------------: |
+| 1. Users are able to register an account and login                     |     5      |           5           |
+| 2. Users can read blog posts.                                          |     5      |           5           |
+| 3. Users are unable to access certain fetaures if not registered.      |     5      |           4           |
+| 4. Admin can approve / disapprove comments.                            |     4      |           4           |
+| 5. Users can view information on their favourite characters.           |     3      |           4           |
+
+## User Stories
 
 ## Testing
 

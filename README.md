@@ -29,6 +29,26 @@ This project is for educational purposes only.
 
 ## User Stories
 
+### User Goals
+
+* As a **User**, I want to easily understand the purpose of the site when navigating on it.
+* As a **User**, I want to be able to have the same functionalities on different devices (mobile, tablet and PC).
+* As a **User**, I want to be able to read blog posts easily on the site.
+* As a **User**, I want to be able to sign up for an account.
+
+### Registered User goals
+
+* As a **Registered User**, I want to be able to easily login and logout of my account.
+* As a **Registered User**, I want to be able to easily add comments to blog posts.
+* As a **Registered User**, I want to be able read the blog. 
+
+
+### Site Owner/Superuser goals
+
+* As a **Site Owner/Superuser**, I want to be able to add new posts.
+* As a **Site Owner/Superuser**, I want to be able to edit and delete posts.
+* As a **Site Owner/Superuser**, I want to be able to access the admin section of the site to view comments and approve them.
+
 ## Testing
 
 

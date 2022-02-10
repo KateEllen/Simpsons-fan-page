@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from django.views.generic import ListView, DetailView, CreateView
-from .models import Post, Comment 
+from .models import Post, Comment
 from .models import Characters
 from .forms import CommentForm
 from django.urls import reverse_lazy, reverse
@@ -48,11 +48,10 @@ class AddCommentView(CreateView):
     form_class = CommentForm
     template_name = 'add_comment.html'
     success_url = reverse_lazy('home')
-    
+
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
         return super().form_valid(form)
-        
 
 
 class CharacterDetail(View):
@@ -62,7 +61,7 @@ class CharacterDetail(View):
 
 
 class PostLike(View):
-    
+
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():

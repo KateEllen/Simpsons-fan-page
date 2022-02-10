@@ -24,7 +24,7 @@ class Post(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        if not self.title: 
+        if not self.title:
             return ""
         else:
             return self.title  # noqa

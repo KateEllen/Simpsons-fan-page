@@ -51,6 +51,50 @@ This project is for educational purposes only.
 
 ## Testing
 
+### Lighthouse Audit 
+![Lighthouse Audit](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/audit.png)
+
+
+### Validator Testing 
+#### W3C CSS Validation 
+Passed through the CSS validator with no errors.
+![CSS Validator](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/css_validation.png)
+
+#### HTML Validator 
+Passed through HTML Validator with no errors.
+![HTML Validator](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/html-validation.png)
+
+#### PEP8
+All python files passed through PEP8 with no errors. 
+![JS Validator](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/python_validation.png)
+
+#### Cross Browser and Device Testing
+
+- I tested my site on the below. 
+1. Samsung S20 - 5.97 X 2.72 
+2. MacBook Pro - 12.78 X 8.94 
+3. dev tools emulator: pixel 2 - SM 411 x 731 mm
+
+- It was also tested on safari, chrome and firefox. 
+
+#### Dog, Trivia & Croc v Alligator quiz:
+    1. Choose your quiz.
+    2. Try to click your answer.
+    3. Try to click the next button.
+    4. Try to click the restart button
+    5. Ensure page shows a green background for right answer, and a red background for wrong answers. 
+    6. Repeat on all pages.
+
+#### Name collector: 
+    1. Open page.
+    2. Enter name.
+    3. Make sure welcome message shows with name added.
+    4. Check that if no name is entered that the default is Player 1. 
+
+#### How to: 
+    1. Click how to button. 
+    2. Make sure you can see the content. 
+    3. Click on the X button to ensure it will close the modal. 
 
 ### Validator Testing 
 ## PEP8 

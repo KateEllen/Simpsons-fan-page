@@ -4,8 +4,8 @@
 
 {% load crispy_forms_tags %}
 
-<h1>{{ post.title }}</h1>
-<small>By: {{ post.author }}</small>
+<h2>{{ post.title }}</h2>
+<small class="blog_author">By: {{ post.author }}</small>
 <hr>
 <br/>
 {{ post.content | safe }}
@@ -28,7 +28,7 @@
     <br/> <br/>
 
     {% endfor %}
-    <a href="{% url 'add_comment' post.pk%}">Add Comment</a>
+    <a class="comment_button" href="{% url 'add_comment' post.pk%}">Add Comment</a>
     <br/> <br/>
 {% endif %}
 <br/>

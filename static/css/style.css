@@ -31,6 +31,42 @@ h1 {
   background: var(--blue);
 }
 
+h2 {
+  text-align: center;
+  padding: 10px 4px;
+  margin-top: 15px;
+}
+
+h3 {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.logout_message {
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.logout_btn {
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: bolder;
+}
+
+.blog_author {
+  font-size: large;
+  font-weight: bold;
+}
+
 footer {
   position: relative;
   height: 150px;
@@ -52,14 +88,11 @@ footer {
   height: 150px;
 }
 
-
-
-.hero-image {
-  height: 600px;
-  width: 100%;
-  background: url("/media/simpsons-home.png");
+.comment_button {
+  text-align: center;
+  
+  
 }
-
 
 .blog-card {
   min-height: 270px;

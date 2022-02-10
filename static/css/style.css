@@ -90,8 +90,6 @@ footer {
 
 .comment_button {
   text-align: center;
-  
-  
 }
 
 .blog-card {
@@ -117,8 +115,14 @@ footer {
 }
 
 .blog-card > a:hover {
-  text-decoration: underline;
+  font-weight: bold;
+  text-decoration: none;
   color: var(--blue);
+}
+
+.blog-card > a:hover {
+  
+  color:  #ED5AA0;
 }
 
 .blog-card-footer {
@@ -154,9 +158,8 @@ footer {
   color: var(--yellow);
 }
 
-.custom-nav > a.active {
-  text-decoration: underline;
-  color: var(--yellow);
+.custom-nav > a:hover {
+  color: #ED5AA0
 }
 
 @keyframes spin {
@@ -167,6 +170,26 @@ footer {
     transform: rotateZ(360deg);
   }
 }
+
+.btn {
+  background: var(--black);
+  color: var(--yellow);
+  min-width: 260px;
+  
+}
+
+.btn:hover {
+  color: #ED5AA0;
+    
+}
+
+.register-warning {
+margin-top: 5rem;
+font-size: 30px;
+font-weight: bold;
+}
+
+
 
 /* Mobile responsive */
 @media screen and (max-width: 800px) {

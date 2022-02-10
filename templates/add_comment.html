@@ -4,20 +4,28 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<h2>Add Comment</h2>
-<br/>
 
-<div class="form-group">
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-outline-primary btn-lg">Add Comment</button>
+<div class="container">
+    <h2>Add Comment</h2>
+    <br />
+
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-outline-primary btn-lg">Add Comment</button>
+    </div>
+
+    
+    {% else %}
+
+
+    <div class="container text-center register-warning">
+        You're not allowed here... <a class="" href="{% url 'account_signup' %}"> Sign up </a> or get lost!
+    </div>
+
+    
+    {% endif %}
+   
 </div>
-
-{% else %}
-
-You're not allowed here.. Sign up or get lost!
-
-{% endif %}
-
 {% endblock %}

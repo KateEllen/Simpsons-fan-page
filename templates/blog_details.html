@@ -3,61 +3,58 @@
 {% block content %}
 
 {% load crispy_forms_tags %}
+<div class="container text-center">
+    <h2>{{ post.title }}</h2>
+    <small class="blog_author">By: {{ post.author }}</small>
+    <hr>
+    <br />
+    {{ post.content | safe }}
+    <br /><br />
 
-<h2>{{ post.title }}</h2>
-<small class="blog_author">By: {{ post.author }}</small>
-<hr>
-<br/>
-{{ post.content | safe }}
-<br/><br/>
+    <h2>Comments</h2>
 
-
-<h2>Comments</h2>
-
-<br/>
-{% if not post.comments.all %}
-    No Comments yet... <a href="{% url 'add_comment' post.pk%}">Add one</a>
-{% else %}
+    <br />
+    {% if not post.comments.all %}
+    No Comments yet... <a class="btn" href="{% url 'add_comment' post.pk%}">Add one</a>
+    {% else %}
     {% for comment in post.comments.all %}
     <strong>
         {{ comment.name }} -
         {{ comment.created_on }}
     </strong>
-    <br/>
+    <br />
     {{ comment.body }}
-    <br/> <br/>
+    <br /> <br />
 
     {% endfor %}
-    <a class="comment_button" href="{% url 'add_comment' post.pk%}">Add Comment</a>
-    <br/> <br/>
-{% endif %}
-<br/>
+    <a class="comment_button btn" href="{% url 'add_comment' post.pk%}">Add Comment</a>
+    <br /> <br />
+    {% endif %}
+    <br />
+    <hr>
+    {% if user.is_authenticated %}
+    <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+        {% csrf_token %}
+        {% if liked %}
 
-<hr>
+        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                class="'fas fa-heart"></i></button>
 
-{% if user.is_authenticated %}
-<form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-{% csrf_token %}
-{% if liked %}
+        {% else %}
 
-<button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-    class="'fas fa-heart"></i></button>
+        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                class="'far fa-heart"></i></button>
 
-{% else %}
+        {% endif %}
+    </form>
 
-<button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-    class="'far fa-heart"></i></button>
+    {% else %}
 
-{% endif %}
-</form>
+    <span class="text-secondary"><i class="far fa-heart"></i></span>
 
-{% else %}
+    {% endif %}
+    <span class="text-secondary"> {{ post.number_of_likes }}</span>
 
-<span class="text-secondary"><i class="far fa-heart"></i></span>
-
-{% endif %}
-<span class="text-secondary"> {{ post.number_of_likes }}</span>
-
-
+</div>
 
 {% endblock %}

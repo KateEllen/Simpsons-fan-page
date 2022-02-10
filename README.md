@@ -77,27 +77,39 @@ All python files passed through PEP8 with no errors.
 
 - It was also tested on safari, chrome and firefox. 
 
-#### Dog, Trivia & Croc v Alligator quiz:
-    1. Choose your quiz.
-    2. Try to click your answer.
-    3. Try to click the next button.
-    4. Try to click the restart button
-    5. Ensure page shows a green background for right answer, and a red background for wrong answers. 
+#### Navigation
+    1. Select navigation option
+    2. Try to click the nav link.
+    5. Ensure each link shows it's named page. 
     6. Repeat on all pages.
 
-#### Name collector: 
-    1. Open page.
-    2. Enter name.
-    3. Make sure welcome message shows with name added.
-    4. Check that if no name is entered that the default is Player 1. 
+#### Register Page 
+    1. The form fields have validation, it was tested using correct and incorrect input, receiving the expected output. 
+    2. If no name entered, warning pops up. 
+    3. Password secion denies password if not suitable. If enter all numbers it will no accept. 
 
-#### How to: 
-    1. Click how to button. 
-    2. Make sure you can see the content. 
-    3. Click on the X button to ensure it will close the modal. 
+#### Login Page 
+    1. Click log in on nav. 
+    2. Enter your name and password. 
+    3. When correct credential are input, user gains full access to site. 
+    4. When incorrect credentials are put in user does not gain entry to full site and error message is shown. 
 
-### Validator Testing 
-## PEP8 
+#### Log Out Page 
+    1. Click log out on nav. 
+    2. Click log out button on log out page. 
+    3. When correct logged out user does not have full access to site. 
+
+#### Donut Home Page Link
+  1. Click the spinning donut image. 
+  2. Ensure it brings you back to home page. 
+  3. Test on all pages. 
+
+#### Comment Section
+  1. Try to add comment.  
+  2. If logged in, success message for pending comment should appear.  
+  3. If logged out, access denied message is shown when you click on the link. 
+  4. Test on all blog posts. 
+
 
 
 ## Defects 

@@ -77,6 +77,7 @@ class EditCharacterView(UpdateView):
     success_url = reverse_lazy("characters")
 
 
+Character Delete Page
 @method_decorator(login_required(
     login_url='/accounts/login/'), name='dispatch')
 class DeleteCharacterView(DeleteView):
@@ -84,7 +85,7 @@ class DeleteCharacterView(DeleteView):
     template_name = 'delete_character.html'
     success_url = reverse_lazy("characters_list")
 
-
+Add Character page
 @method_decorator(login_required(
     login_url='/accounts/login/'), name='dispatch')
 class AddCharactersView(CreateView):
@@ -92,6 +93,8 @@ class AddCharactersView(CreateView):
     form_class = CharacterAddForm
     template_name = 'add_characters.html'
     success_url = reverse_lazy('characters_list')
+
+
 
 
 

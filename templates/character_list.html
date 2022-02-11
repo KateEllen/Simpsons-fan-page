@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Your favourite characters
+{% endblock %}
+{% block content %}
+    <div class="row">
+        <h1>All About The Simpson's Characters</h1>
+    </div>
+    <div class="album py-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                {% for character in characters_list %}
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <div class="image-container">
+                                {% if "placeholder" in character.image.url %}
+                                    <img class="card-img-top img-fluid"
+                                         src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                {% else %}
+
+                                    <img class="bd-placeholder-img card-img-top" width="100%" height="250"
+                                         src=" {{ character.image.url }}">
+                                {% endif %}
+                            </div>
+                            <div class="blog-card">
+                                <h3>{{ character.name }}</h3>
+                                <a href="{% url 'character_detail' character.pk %}"
+                                   class="post-link">Read More</a>
+                            </div>
+
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Your favourite characters
+{% endblock %}
+{% block content %}
+
+    <div class="row">
+        <h1>All About {{ characters.name }}</h1>
+    </div>
+    <div class="album py-5">
+        <div class="container">
+            <div class="row row-cols-1 g-3">
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="image-container">
+                            {% if "placeholder" in characters.image.url %}
+                                <img class="card-img-top img-fluid"
+                                     src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                            {% else %}
+
+                                <img class="bd-placeholder-img card-img-top" width="100%" height="250"
+                                     src=" {{ characters.image.url }}">
+                            {% endif %}
+                        </div>
+                        <div class="blog-card">
+                            <h3>{{ characters.name }}</h3>
+                            <div>
+                                {{ characters.bio }}
+                            </div>
+                            <div class="blog-card-footer">
+                                <p class=""><i class="fas fa-quote-left"></i>
+                                    {{ characters.tag_lines }}
+                                    <i class="fas fa-quote-right"></i>
+                                </p>
+                                {% if user.is_authenticated %}
+                                <hr>
+                                    <a class="btn btn-secondary" href="{%  url 'update_character' pk=characters.pk %}"><i class="fas fa-edit"></i> Edit Character</a>
+                                    {% if request.user.is_superuser %}
+                                        <a class="btn btn-danger" href="{%  url 'delete_character' pk=characters.pk %}"><i class="fas fa-trash"></i> Delete Character</a>
+                                    {% endif %}
+                                {% endif %}
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -121,7 +121,6 @@ footer {
 }
 
 .blog-card > a:hover {
-  
   color:  #ED5AA0;
 }
 
@@ -148,6 +147,7 @@ footer {
 .custom-nav {
   display: flex;
   height: 70px;
+  font-size:5vw;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -189,12 +189,20 @@ font-size: 30px;
 font-weight: bold;
 }
 
+#id_email {
+  display: none;
+}
+
+label[for='id_email']{
+  display: none;
+}
+
 
 
 /* Mobile responsive */
 @media screen and (max-width: 800px) {
 
   .custom-nav-outer {
-   font-size: 2px;
+    font-size:5vw
   }
 }

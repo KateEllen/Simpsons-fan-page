@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from django.views.generic import ListView, DetailView, CreateView
-from .models import Post, Comment
-from .models import Characters
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from .models import Post, Comment, Characters
 from .forms import CommentForm
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+
 
 
 class HomeView(ListView):
@@ -54,10 +56,43 @@ class AddCommentView(CreateView):
         return super().form_valid(form)
 
 
-class CharacterDetail(View):
+class CharacterList(ListView):
     model = Characters
-    queryset = Post.objects.filter(status=1).order_by("-created_on")
-    template_name = "characters.html"
+    queryset = Characters.objects.order_by("name")
+    template_name = "characters_list.html"
+    paginate_by = 6
+
+
+class CharacterDetail(DetailView):
+    model = Characters
+    template_name = "characters_detail.html"
+
+
+@method_decorator(login_required(
+    login_url='/accounts/login/'), name='dispatch')
+class EditCharacterView(UpdateView):
+    model = Characters
+    form_class = CharacterEditForm
+    template_name = 'edit_character.html'
+    success_url = reverse_lazy("characters")
+
+
+@method_decorator(login_required(
+    login_url='/accounts/login/'), name='dispatch')
+class DeleteCharacterView(DeleteView):
+    model = Characters
+    template_name = 'delete_character.html'
+    success_url = reverse_lazy("characters_list")
+
+
+@method_decorator(login_required(
+    login_url='/accounts/login/'), name='dispatch')
+class AddCharactersView(CreateView):
+    model = Characters
+    form_class = CharacterAddForm
+    template_name = 'add_characters.html'
+    success_url = reverse_lazy('characters_list')
+
 
 
 class PostLike(View):

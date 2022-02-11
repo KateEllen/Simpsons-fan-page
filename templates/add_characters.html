@@ -1,0 +1,7 @@
+@method_decorator(login_required(
+    login_url='/accounts/login/'), name='dispatch')
+class AddCharactersView(CreateView):
+    model = Characters
+    form_class = CharacterAddForm
+    template_name = 'add_characters.html'
+    success_url = reverse_lazy('characters_list')

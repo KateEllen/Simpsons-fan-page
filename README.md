@@ -10,6 +10,17 @@ This blog is about all things Simpson's. You can read blog posts and comments, a
 
 ### Wire Frames 
 
+The final result is slightly different as during the development stage the way things were displayed was not as user friendly as expected. 
+
+## Styling
+
+### Colours
+
+The palette of colors for the site are primarily yesllow and black. They yellow is a classic reminder of the simpsons, and the black gave it a more defined look. 
+I used the pink shade from the donut on top to make elements which you can hover over more noticible. 
+
+![Color-palette](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/colour_scheme.png)
+
 ## User Experience 
 
 ## Project Goals
@@ -62,7 +73,7 @@ Passed through the CSS validator with no errors.
 
 #### HTML Validator 
 Passed through HTML Validator with no errors.
-![HTML Validator](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/html-validation.png)
+![HTML Validator]()
 
 #### PEP8
 All python files passed through PEP8 with no errors. 

@@ -5,7 +5,7 @@
 
 {% if user.is_authenticated %}
 
-<div class="container">
+<div class="container ">
     <h2>Add Comment</h2>
     <br />
 
@@ -16,16 +16,12 @@
             <button class="btn btn-outline-primary btn-lg">Add Comment</button>
     </div>
 
-    
     {% else %}
 
-
     <div class="container text-center register-warning">
-        You're not allowed here... <a class="" href="{% url 'account_signup' %}"> Sign up </a> or get lost!
-    </div>
+    <h3>You're not allowed here.. <a class="btn" href="{% url 'account_signup' %}">Sign up</a>or get lost!</h3>
+   </div>
 
-    
     {% endif %}
-   
 </div>
 {% endblock %}

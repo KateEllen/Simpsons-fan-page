@@ -25,7 +25,7 @@
     <div class="container">
       <div class="custom-nav">
         <a aria-current="page" href="{% url 'home' %}">Home</a>
-        <a href="{% url 'characters_list' %}">Characters</a>
+        <a href="{% url 'character_list' %}">Characters</a>
         {% if user.is_authenticated %}
         <a href="{% url 'account_logout' %}">Logout</a>
         {% else %}

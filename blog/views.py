@@ -59,13 +59,13 @@ class AddCommentView(CreateView):
 class CharacterList(ListView):
     model = Characters
     queryset = Characters.objects.order_by("name")
-    template_name = "characters_list.html"
+    template_name = "character_list.html"
     paginate_by = 6
 
 
 class CharacterDetail(DetailView):
     model = Characters
-    template_name = "characters_detail.html"
+    template_name = "character_detail.html"
 
 
 @method_decorator(login_required(

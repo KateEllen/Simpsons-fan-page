@@ -3,58 +3,33 @@
 {% block content %}
 
 {% load crispy_forms_tags %}
-<div class="container text-center">
-    <h2>{{ post.title }}</h2>
-    <small class="blog_author">By: {{ post.author }}</small>
-    <hr>
-    <br />
-    {{ post.content | safe }}
-    <br /><br />
+<h1>{{ post.title }}</h1>
 
-    <h2>Comments</h2>
-
-    <br />
-    {% if not post.comments.all %}
-    No Comments yet... <a class="btn" href="{% url 'add_comment' post.pk%}">Add one</a>
-    {% else %}
-    {% for comment in post.comments.all %}
-    <strong>
-        {{ comment.name }} -
-        {{ comment.created_on }}
-    </strong>
-    <br />
-    {{ comment.body }}
-    <br /> <br />
-
-    {% endfor %}
-    <a class="comment_button btn" href="{% url 'add_comment' post.pk%}">Add Comment</a>
-    <br /> <br />
-    {% endif %}
-    <br />
-    <hr>
-    {% if user.is_authenticated %}
-    <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-        {% csrf_token %}
-        {% if liked %}
-
-        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                class="'fas fa-heart"></i></button>
-
-        {% else %}
-
-        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                class="'far fa-heart"></i></button>
-
-        {% endif %}
-    </form>
-
-    {% else %}
-
-    <span class="text-secondary"><i class="far fa-heart"></i></span>
-
-    {% endif %}
-    <span class="text-secondary"> {{ post.number_of_likes }}</span>
-
+<div class="container text-center mb-5">
+    <div class="card">
+        <div class="card-blog-details">
+            <h4> {{ post.content | safe }}</h4>
+            <small class="blog_author">By: {{ post.author }}</small>
+            <hr />
+            <h2>Comments</h2>
+            <br />
+            {% if not post.comments.all %}
+            No Comments yet... <a class="btn" href="{% url 'add_comment' post.pk%}">Add one</a>
+            {% else %}
+            {% for comment in post.comments.all %}
+            <p><strong>
+                    {{ comment.name }} -
+                    {{ comment.created_on }}
+            </strong></p>
+            {{ comment.body }}
+            <br /> <br />
+            {% endfor %}
+            <a class=" btn" href="{% url 'add_comment' post.pk%}">Add Comment</a>
+           
+            {% endif %}
+            <br />
+        </div>
+    </div>
 </div>
 
 {% endblock %}

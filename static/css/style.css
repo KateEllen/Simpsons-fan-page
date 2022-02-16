@@ -24,11 +24,24 @@ main {
   animation: spin 10s linear infinite;
 } 
 
+/* Character detail */
+.character-detail-card {
+  max-width: 900px;
+margin: 0 auto;
+  
+}
+
+.character-img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
 h1 {
   text-align: center;
   padding: 10px 4px;
-  margin: 0 0 20px 0;
-  background: var(--blue);
+  margin: 20px 0 20px 0;
 }
 
 h2 {
@@ -111,7 +124,6 @@ footer {
 .blog-card > a {
   font-weight: bold;
   text-decoration: none;
-  color: var(--blue);
 }
 
 .blog-card > a:hover {
@@ -137,6 +149,40 @@ footer {
 .blog-card-footer > p + p {
   margin-top: 4px;
 }
+
+/* Character cards */
+.character-card {
+  min-height: 150px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.character-card > h3 {
+  color: var(--black);
+  font-size: 1.8rem;
+}
+
+.character-card > p {
+  color: var(--black);
+}
+
+.character-card > a {
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.character-card > a:hover {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.character-card > a:hover {
+  color:  #ED5AA0;
+}
+
 
 .custom-nav-outer {
   background-color: var(--black);
@@ -183,6 +229,13 @@ footer {
     
 }
 
+
+.btn-edit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .register-warning {
 margin-top: 5rem;
 font-size: 30px;
@@ -198,6 +251,14 @@ label[for='id_email']{
 }
 
 
+.character-quote {
+  font-size:larger;
+  font-weight: bold;
+}
+
+.card-blog-details {
+  margin: 40px;
+}
 
 /* Mobile responsive */
 @media screen and (max-width: 800px) {
@@ -205,4 +266,11 @@ label[for='id_email']{
   .custom-nav-outer {
     font-size:5vw
   }
+
+  .character-detail-card {
+  margin: 20px;
+  
+}
+
+
 }

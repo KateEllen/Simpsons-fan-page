@@ -10,7 +10,11 @@ This blog is about all things Simpson's. You can read blog posts and comments, a
 
 ### Wire Frames 
 
-The final result is slightly different as during the development stage the way things were displayed was not as user friendly as expected. 
+The final result is slightly different as during the development stage the way things were displayed was not as user friendly as expected and I decided to go less minamilistic on the homepage. 
+
+* [Homepage](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/home_page_wireframe.png)
+* [Phone](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/phone_wireframe.png)
+* [Characters](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/page2_wireframe.png)
 
 ## Styling
 

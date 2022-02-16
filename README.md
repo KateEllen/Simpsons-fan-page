@@ -39,7 +39,7 @@ This project is for educational purposes only.
 | 1. Users are able to register an account and login                     |     5      |           5           |
 | 2. Users can read blog posts.                                          |     5      |           5           |
 | 3. Users are unable to access certain fetaures if not registered.      |     5      |           4           |
-| 4. Admin can approve / disapprove comments.                            |     4      |           4           |
+| 4. Admin can add characters.                                           |     4      |           4           |
 | 5. Users can view information on their favourite characters.           |     3      |           4           |
 
 ## User Stories
@@ -67,7 +67,7 @@ This project is for educational purposes only.
 ## Testing
 
 ### Lighthouse Audit 
-![Lighthouse Audit](https://github.com/KateEllen/Animal-Quiz/blob/main/assets/images/documentation/audit.png)
+![Lighthouse Audit]()
 
 
 ### Validator Testing 
@@ -125,7 +125,11 @@ All python files passed through PEP8 with no errors.
   3. If logged out, access denied message is shown when you click on the link. 
   4. Test on all blog posts. 
 
-
+#### Character Page
+  1. Click character link.  
+  2. Select character image to view character info.  
+  3. If admin, option is given to delete & edit character. 
+  4. If logged out, option to delete / edit character is now shown. 
 
 ## Defects 
 

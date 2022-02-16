@@ -272,5 +272,9 @@ label[for='id_email']{
   
 }
 
+.custom-nav > a { 
+  font-size:4.7vw;
+}
+
 
 }

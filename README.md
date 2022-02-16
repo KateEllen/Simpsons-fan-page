@@ -128,8 +128,10 @@ All python files passed through PEP8 with no errors.
 #### Character Page
   1. Click character link.  
   2. Select character image to view character info.  
-  3. If admin, option is given to delete & edit character. 
-  4. If logged out, option to delete / edit character is now shown. 
+  3. If admin, option is given to delete character. 
+  4. If not admin option to delete is not shown. 
+  5. If logged in, option is given to edit. 
+  6. If not logged no there is no option to edit. 
 
 ## Defects 
 
@@ -160,11 +162,11 @@ The site was deployed to Heroku. The steps to deploy are as follows:
   ### Local/Gitpod
 
 
-The live link can be found here - 
+The live link can be found here - https://simpsons-blog.herokuapp.com/
 
-### Credits 
+### Credits
 
-#### Media
+## Media Credits
 
 
 ## Acknowledgments

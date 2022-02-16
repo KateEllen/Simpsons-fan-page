@@ -11,13 +11,8 @@
             <div class="col">
                 <div class="card h-100 shadow-sm">
                     <div class="image-container">
-                        {% if "placeholder" in post.featured_image.url %}
-                        <img class="card-img-top img-fluid"
-                            src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
-                        {% else %}
                         <img class="bd-placeholder-img card-img-top" width="100%" height="250"
                             src=" {{ post.featured_image.url }}">
-                        {% endif %}
                     </div>
                     <div class="blog-card">
                         <h3>{{ post.title }}</h3>

@@ -3,24 +3,23 @@
 
 {% block content %}
 
-    <div class="album py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col text-left mt-3">
-                    <h2 class="logo-font text-center">Edit Character: {{ characters.name }}</h2>
-                    <hr class="mb-2">
-                    <div class="col-12 col-md-10 offset-md-1 blogs-posted">
-                        <div class="form-group">
-                            <form method="POST">
-                                {% csrf_token %}
-                                {{ form.as_p }}
-                                <button class="btn">Edit Character</button>
-                            </form>
-                        </div>
+<div class="album py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col text-left mt-3">
+                <h2 class="logo-font text-center">Edit Character: {{ characters.name }}</h2>
+                <hr class="mb-2">
+                <div class="col-12 col-md-10 offset-md-1 blogs-posted">
+                    <div class="form-group">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button class="btn">Edit Character</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
-

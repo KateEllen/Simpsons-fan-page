@@ -20,12 +20,12 @@
             <p><strong>
                     {{ comment.name }} -
                     {{ comment.created_on }}
-            </strong></p>
+                </strong></p>
             {{ comment.body }}
             <br /> <br />
             {% endfor %}
             <a class=" btn" href="{% url 'add_comment' post.pk%}">Add Comment</a>
-           
+
             {% endif %}
             <br />
         </div>

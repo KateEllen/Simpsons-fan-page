@@ -3,30 +3,29 @@
 
 {% block content %}
 
-    <div class="album py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col text-left mt-3">
-                    <h2 class="logo-font text-center">Delete Character: {{ characters.name }}</h2>
-                    <hr class="w-50 mb-1">
-                    <div class="col-12 col-md-10 offset-md-1 blogs-posted">
-                        <div class="form-group">
-                            {% if request.user.is_superuser %}
-                                <form method="post">{% csrf_token %}
-                                    <p>Are you sure you want to delete "{{ object }}"?</p>
-                                    <input class="btn btn-danger" type="submit" value="Confirm">
-                                </form>
-                            {% else %}
-                                <p>You must be a superuser to delete "{{ object }}"?</p>
-                                <a href="{% url 'character_detail' characters.pk %}"
-                                   class="btn btn-primary">Go Back</a>
-                            {% endif %}
-                        </div>
-
+<div class="album py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col text-left mt-3">
+                <h2 class="logo-font text-center">Delete Character: {{ characters.name }}</h2>
+                <hr class="w-50 mb-1">
+                <div class="col-12 col-md-10 offset-md-1 blogs-posted">
+                    <div class="form-group">
+                        {% if request.user.is_superuser %}
+                        <form method="post">{% csrf_token %}
+                            <p>Are you sure you want to delete "{{ object }}"?</p>
+                            <input class="btn btn-danger" type="submit" value="Confirm">
+                        </form>
+                        {% else %}
+                        <p>You must be a superuser to delete "{{ object }}"?</p>
+                        <a href="{% url 'character_detail' characters.pk %}" class="btn btn-primary">Go Back</a>
+                        {% endif %}
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
-    </div>
+</div>
+</div>
 {% endblock %}

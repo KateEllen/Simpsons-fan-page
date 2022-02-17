@@ -1,7 +1,25 @@
-@method_decorator(login_required(
-    login_url='/accounts/login/'), name='dispatch')
-class AddCharactersView(CreateView):
-    model = Characters
-    form_class = CharacterAddForm
-    template_name = 'add_characters.html'
-    success_url = reverse_lazy('characters_list')
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="album py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col text-left mt-3">
+                    <h2 class="logo-font text-center">Add Character: </h2>
+                    <hr class="w-50 mb-1">
+                    <div class="col-12 col-md-10 offset-md-1 blogs-posted">
+                        <div class="form-group">
+                            <form method="POST">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <button class="btn btn-secondary">Add Character</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -160,6 +160,8 @@ As a registered user you can edit character details.
 As a SuperUser you can delete characters from the character page. 
 
 - ADD COMMENT PAGE
+Registered users can leave comments on blog posts. If not registered you are redirected to signup. 
+
 - LOGIN
 Users who have already registered can login to the page and can leave comments and edit characters. 
 
@@ -168,8 +170,6 @@ Users can sign up for an account if they do not already have one.
 
 - LOGOUT
 Users who are logged in can easily log out. 
-
-
 
 ## Deployments 
 ### Heroku 

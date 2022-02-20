@@ -1,5 +1,7 @@
 # Simpsons Fan Page
 
+![Website Display ](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/responsive_img.png)
+
 ## Author 
 Kate_Ellen
 

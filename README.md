@@ -79,8 +79,8 @@ Passed through the CSS validator with no errors.
 ![CSS Validator](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/css_validation.png)
 
 #### HTML Validator 
-Passed through HTML Validator with no errors.
-![HTML Validator]()
+All pages passed through HTML Validator with no errors.
+![HTML Validator](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/html_validation.png)
 
 #### PEP8
 All python files passed through PEP8 with no errors. 
@@ -171,31 +171,52 @@ Users can sign up for an account if they do not already have one.
 - LOGOUT
 Users who are logged in can easily log out. 
 
+## Future Feautures
+
+- 404 page
+A modified 404 page to suit the style of the website.
+
+- 500 page
+A modified 500 page to suit the style of the website.
+
+- Staff users
+I would like to add approved users to the site. They would have the same access as a SuperUser. 
+
+- Swag Shopping Page
+I would like to add a merch page where fans can buy merch from the blog.
+
+
 ## Deployments 
 ### Heroku 
+
 The site was deployed to Heroku. The steps to deploy are as follows: 
   - First, you must log into Heroku and go into the deploy tab. 
   
   - From here, you go to the Config Vars section. 
+
+  ![Deployment1](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/config_vars.png)
   
-  - You then enter Key: PORT and Value: 8000. If you have a google sheet installed you will need to enter the data here too. 
-  
-  - You must then go to the buildpacks section. Here you add Python and Nodejs. The must be in the order of python on top, and Nodejs underneath. 
+  - You then enter Key: CLOUDINARY_URL and Value: your cloudinary key. Enter Key: DATABASE_URL and add your database value. Enter Key : SECRET_KEY and your secret key value. 
   
   - After finishing the above you will go to the 'Deploy' tab. 
   
+  ![Deployment2](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/deploy_tab.png)
+  
   - You then connect to your Github account. 
+
+  ![Deployment3](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/deployment.png)
   
   - Once you enter your repository name, your Github project will be connected to Heroku. 
   
   - From here you have two options to deploy. You can select the option to enable automatic deploys, so when you commit any changes will automatically deploy. 
   
-  - The second option is to manually deploy, this is what I personally chose. When you click the 'Deploy' button, you will watch your files being uploaded. 
+  - The second option is to manually deploy. When you click the 'Deploy' button, you will watch your files being uploaded. 
+
+   ![Deployment4](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/deployment_2.png)
   
-  -   Once this is complete, a sucess message will appear with a 'View' button that will bring you to the deployed project. 
+  - Once this is complete, a sucess message will appear with a 'View' button that will bring you to the deployed project. 
 
   ### Local/Gitpod
-
 
 The live link can be found here - https://simpsons-blog.herokuapp.com/
 

@@ -28,10 +28,6 @@ I used the pink shade from the donut on top to make elements which you can hover
 ![Color-palette](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/colour_scheme.png)
 ## Agile Process
 
-### User Stories 
-
-User Stories can be found at https://github.com/KateEllen/Simpsons-fan-page/projects/1 
-
 ## Project Goals
 
 The goal of this project is to create blog page, where people can start a conversation. 
@@ -48,6 +44,8 @@ This project is for educational purposes only.
 | 5. Users can view information on their favourite characters.           |     3      |           4           |
 
 ## User Stories
+
+User Stories can be found at https://github.com/KateEllen/Simpsons-fan-page/projects/1 
 
 ### User Goals
 
@@ -66,8 +64,8 @@ This project is for educational purposes only.
 ### Site Owner/Superuser goals
 
 * As a **Site Owner/Superuser**, I want to be able to add new posts.
-* As a **Site Owner/Superuser**, I want to be able to edit and delete posts.
-* As a **Site Owner/Superuser**, I want to be able to access the admin section of the site to view comments and approve them.
+* As a **Site Owner/Superuser**, I want to be able to edit and delete characters.
+* As a **Site Owner/Superuser**, I want to be able to access the admin section of the site to view comments and delete them.
 
 ## Testing
 
@@ -139,6 +137,38 @@ All python files passed through PEP8 with no errors.
   6. If not logged no there is no option to edit. 
 
 ## Defects 
+
+## Features
+
+- HOME PAGE/ BLOG LIST PAGE
+You can view the home page and blog posts here. 
+
+- BLOG DETAIL PAGE
+Here is where you can view the blog posts and leave comments. 
+
+- CHARACTER PAGE
+Here you can view the character's uploaded by the SuperUser. When not registered you can read about the chararcters, when 
+logged in you can edit the character and if you are a SuperUser you can delete characters. 
+
+- ADD CHARACTER
+As a SuperUser you add characters to the page. 
+
+- EDIT CHARACTER
+As a registered user you can edit character details. 
+
+- DELETE CHARACTER
+As a SuperUser you can delete characters from the character page. 
+
+- ADD COMMENT PAGE
+- LOGIN
+Users who have already registered can login to the page and can leave comments and edit characters. 
+
+- REGISTER
+Users can sign up for an account if they do not already have one. 
+
+- LOGOUT
+Users who are logged in can easily log out. 
+
 
 
 ## Deployments 

@@ -217,7 +217,7 @@ footer {
     transform: rotateZ(360deg);
   }
 }
-
+/* buttons */
 .btn {
   background: var(--black);
   color: var(--yellow);
@@ -237,12 +237,20 @@ footer {
   margin-right: auto;
 }
 
+.btn-danger {
+  display: block;
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .register-warning {
 margin-top: 5rem;
 font-size: 30px;
 font-weight: bold;
 }
 
+/* hide email display for registration */
 #id_email {
   display: none;
 }

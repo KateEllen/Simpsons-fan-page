@@ -232,9 +232,21 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 
 The live link can be found here - https://simpsons-blog.herokuapp.com/
 
-### Credits
+## Credits
 
-## Media Credits
+### Media Credits
+- Blog post images and images for characters were found on : https://frinkiac.com/
+- Colour palette was creadted by using : https://htmlcolors.com/create-palette
+- Donut and Kang images were found here : https://www.pngegg.com/
 
+### Content Credits
+- Most of my content for the blog posts and character information were found at : https://simpsons.fandom.com/wiki/Simpsons_Wiki
+
+### Code Credits 
+- I learned how to make the spinning donut here : https://flaviocopes.com/css-animations/
+- Overall concept was developed by using Code Institute tutorials and other tutorials by: https://www.youtube.com/channel/UCFB0dxMudkws1q8w5NJEAmw. I adapted my comment section from Codemy.com tutorials. 
+ 
 
 ## Acknowledgments
+- I had help from Niall Maher and Carolina Cobo with the theme of the page.
+- I also had help from my wonderful mentor Malia, who always steers me in the right direction. 

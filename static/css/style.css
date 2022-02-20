@@ -265,6 +265,11 @@ label[for='id_email']{
   font-weight: bold;
 }
 
+.delete_char {
+  text-align: center;
+  font-size: larger;
+}
+
 .card-blog-details {
   margin: 40px;
 }

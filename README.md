@@ -151,7 +151,7 @@ Here you can view the character's uploaded by the SuperUser. When not registered
 logged in you can edit the character and if you are a SuperUser you can delete characters. 
 
 - ADD CHARACTER
-As a SuperUser you add characters to the page. 
+As a SuperUser you can add characters to the page. 
 
 - EDIT CHARACTER
 As a registered user you can edit character details. 

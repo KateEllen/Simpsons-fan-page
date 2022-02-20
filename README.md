@@ -165,12 +165,15 @@ As a SuperUser you can delete characters from the character page.
 
 - ADD COMMENT PAGE
 Registered users can leave comments on blog posts. If not registered you are redirected to signup. 
+![Add comment](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/add_comment.png)
 
 - LOGIN
 Users who have already registered can login to the page and can leave comments and edit characters. 
+![Login](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/signin.png)
 
 - REGISTER
 Users can sign up for an account if they do not already have one. 
+![Sign up](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/signup.png)
 
 - LOGOUT
 Users who are logged in can easily log out. 

@@ -281,6 +281,10 @@ label[for='id_email']{
   margin: 40px;
 }
 
+.logout_message {
+  margin-top: 150px;
+}
+
 /* Mobile responsive */
 @media screen and (max-width: 800px) {
 

@@ -142,13 +142,16 @@ All python files passed through PEP8 with no errors.
 
 - HOME PAGE/ BLOG LIST PAGE
 You can view the home page and blog posts here. 
+![Home page](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/home_page.png)
 
 - BLOG DETAIL PAGE
 Here is where you can view the blog posts and leave comments. 
+![Blog](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/blog_post.png)
 
 - CHARACTER PAGE
 Here you can view the character's uploaded by the SuperUser. When not registered you can read about the chararcters, when 
 logged in you can edit the character and if you are a SuperUser you can delete characters. 
+![Character page](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/character_page.png)
 
 - ADD CHARACTER
 As a SuperUser you can add characters to the page. 
@@ -177,6 +180,8 @@ Users can sign up for an account if they do not already have one.
 
 - LOGOUT
 Users who are logged in can easily log out. 
+![Sign out](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/signout.png)
+
 
 ## Future Feautures
 

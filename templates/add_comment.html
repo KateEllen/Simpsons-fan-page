@@ -4,7 +4,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-
+  <!-- Comments -->
 <div class="container ">
     <h2>Add Comment</h2>
     <br />
@@ -17,7 +17,7 @@
     </div>
 
     {% else %}
-
+      <!-- Re-direct user to sign up option if not logged in  -->
     <div class="container text-center register-warning">
         <h3>You're not allowed here.. <a class="btn" href="{% url 'account_signup' %}">Sign up</a>or get lost!</h3>
     </div>

@@ -26,8 +26,11 @@ The palette of colors for the site are primarily yesllow and black. They yellow 
 I used the pink shade from the donut on top to make elements which you can hover over more noticible. 
 
 ![Color-palette](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/colour_scheme.png)
+## Agile Process
 
-## User Experience 
+### User Stories 
+
+User Stories can be found at https://github.com/KateEllen/Simpsons-fan-page/projects/1 
 
 ## Project Goals
 

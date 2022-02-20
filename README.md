@@ -152,12 +152,16 @@ logged in you can edit the character and if you are a SuperUser you can delete c
 
 - ADD CHARACTER
 As a SuperUser you can add characters to the page. 
+![Nav for character](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/add_character_nav.png)
+![Add character](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/add_character_page.png)
 
 - EDIT CHARACTER
 As a registered user you can edit character details. 
+![Edit character](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/edit_character.png)
 
 - DELETE CHARACTER
 As a SuperUser you can delete characters from the character page. 
+![Delete character](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/delete_character.png)
 
 - ADD COMMENT PAGE
 Registered users can leave comments on blog posts. If not registered you are redirected to signup. 

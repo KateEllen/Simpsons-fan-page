@@ -70,7 +70,7 @@ User Stories can be found at https://github.com/KateEllen/Simpsons-fan-page/proj
 ## Testing
 
 ### Lighthouse Audit 
-![Lighthouse Audit]()
+![Lighthouse Audit](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/lighthouse.png)
 
 
 ### Validator Testing 

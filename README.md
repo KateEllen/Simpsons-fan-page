@@ -139,13 +139,20 @@ All python files passed through PEP8 with no errors.
 ## Defects 
 
 ## Features
+- NAVIGATION:
+1. Has easy navigation for users to go between login/logout functionality and Charcters vs Home/Blog Page
+Options change based on user’s logged in status, Register Login are replaced by Sign Out
+2. If User is super user, then they can access the admin function to add a character
 
-- HOME PAGE/ BLOG LIST PAGE
-You can view the home page and blog posts here. 
+- HOME PAGE/ BLOG LIST PAGE:
+1. Allows user to see a list of blogs about the simpons, getting them right into the main focus of the website
+2. Has Navigation to easily allow user to login or access admin options or switch to characters page
 ![Home page](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/home_page.png)
 
 - BLOG DETAIL PAGE
-Here is where you can view the blog posts and leave comments. 
+1. Allows user to see the main body of a blog entry
+2. Has Add comment button (note the button will encourage users to login as we want more user interaction)
+3. Has Navigation to easily allow user to login or access admin options or switch to characters page
 ![Blog](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/blog_post.png)
 
 - CHARACTER PAGE
@@ -154,20 +161,26 @@ logged in you can edit the character and if you are a SuperUser you can delete c
 ![Character page](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/character_page.png)
 
 - ADD CHARACTER
-As a SuperUser you can add characters to the page. 
+1. Accessed by Admin(superuser) level only URL in navigation for superusers only
+2. Form Validation to not allow blank entires
+3. Template level check that user is super user to keep this functionality really restricted
 ![Nav for character](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/add_character_nav.png)
 ![Add character](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/add_character_page.png)
 
 - EDIT CHARACTER
-As a registered user you can edit character details. 
+1. Accessed by registerd user level only URL by button on bottom of character Detail Page
 ![Edit character](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/edit_character.png)
 
 - DELETE CHARACTER
-As a SuperUser you can delete characters from the character page. 
+1. Accessed by Super User level only URL by button on bottom of character Detail Page
+2. Template level check that user is super user to keep this functionality really restricted
 ![Delete character](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/delete_character.png)
 
 - ADD COMMENT PAGE
-Registered users can leave comments on blog posts. If not registered you are redirected to signup. 
+1. Has unauthenticated version where user is encouraged to login
+2. Has authenticated version where user has entry form
+3. Has validation such that a blank entries are not allowed
+4. Has name field so users can still be anonymous 
 ![Add comment](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/add_comment.png)
 
 - LOGIN

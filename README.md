@@ -43,6 +43,21 @@ This project is for educational purposes only.
 | 4. Admin can add characters.                                           |     4      |           4           |
 | 5. Users can view information on their favourite characters.           |     3      |           4           |
 
+
+## Data Model
+| Field     | Data Type         | Purpose                          | Form Validation          |
+|-----------|-------------------|----------------------------------|--------------------------|
+| pk        | unique Identifier |                                  |                          |
+| name      | CharField         | Character's Name                 | required, max length 200 |
+| image     | CloudinaryField   | Image of Character               | required                 |
+| bio       | TextField         | Biography of Character           | required                 |
+| tag_lines | TextField         | Common phrases used by Character | required                 |
+
+- [x] Create - If a user is a superuser and logged in, they will see a menu option to create a character
+- [x] Read - Characters are read from the Database for the Characters Page, Update Character Page and Character Detail page
+- [x] Update - If a superuser is logged in they will see an edit character button at the bottom of a character detail page to access the update functionality.
+- [x] Delete - If a superuser is logged in they will see a delete character button at the bottom of a character delete page to access the delete functionality
+
 ## User Stories
 
 User Stories can be found at https://github.com/KateEllen/Simpsons-fan-page/projects/1 

@@ -59,7 +59,6 @@ class CharacterList(ListView):
     model = Characters
     queryset = Characters.objects.order_by("name")
     template_name = "character_list.html"
-    paginate_by = 6
 
 
 class CharacterDetail(DetailView):

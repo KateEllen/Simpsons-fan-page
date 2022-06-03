@@ -83,7 +83,16 @@ class EditCharacterView(UpdateView):
 class DeleteCharacterView(DeleteView):
     model = Characters
     template_name = 'delete_character.html'
-    success_url = reverse_lazy('character_list')
+
+    def get_success_url(self, **kwargs):
+        return reverse_lazy("character_list")
+
+    def delete(self, request, *args, **kwargs):
+        """
+        Success message to be displayed after deletion of post.
+        Help from multiple stackoverflow posts.
+        """
+        return super(DeleteCharacterView, self).delete(request, *args, **kwargs)
 
 
 @method_decorator(login_required(

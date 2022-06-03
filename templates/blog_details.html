@@ -25,16 +25,16 @@
             <br /> <br />
             {% endfor %}
             <a class=" btn" href="{% url 'add_comment' post.pk%}">Add Comment</a>
-            {% if comment.comment_author == user or request.user.is_superuser %}
 
-            <div class="block">
-                <small class="mt-2">
-                    <a class = "btn" href="{% url 'edit_comment' comment.id %}">Edit</a>
-                    <a class="text-danger ml-3" href="">Delete</a>
-                </small>
-            </div>
             {% endif %}
 
+            {% if comment.comment_author == user or request.user.is_superuser %}
+            <div class="block">
+                <small class="mt-2">
+                    <a href="{% url 'edit_comment' comment.id %}">Edit</a>
+                    <a class="text-danger ml-3" href="{% url 'delete_comment' comment.id %}">Delete</a>
+                </small>
+            </div>
             {% endif %}
             <br />
         </div>

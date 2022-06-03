@@ -83,7 +83,7 @@ class EditCharacterView(UpdateView):
 class DeleteCharacterView(DeleteView):
     model = Characters
     template_name = 'delete_character.html'
-    success_url = reverse_lazy("characters_list")
+    success_url = reverse_lazy('character_list')
 
 
 @method_decorator(login_required(
@@ -92,7 +92,7 @@ class AddCharactersView(CreateView):
     model = Characters
     form_class = CharacterAddForm
     template_name = 'add_characters.html'
-    success_url = reverse_lazy('characters_list')
+    success_url = reverse_lazy('character_list')
 
 
 class PostLike(View):

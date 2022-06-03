@@ -31,8 +31,8 @@
             {% if comment.comment_author == user or request.user.is_superuser %}
             <div class="block">
                 <small class="mt-2">
-                    <a href="{% url 'edit_comment' comment.id %}">Edit</a>
-                    <a class="text-danger ml-3" href="{% url 'delete_comment' comment.id %}">Delete</a>
+                    <a href="">Edit</a>
+                    <a class="text-danger ml-3" href="">Delete</a>
                 </small>
             </div>
             {% endif %}

@@ -234,11 +234,17 @@ I would like to add a merch page where fans can buy merch from the blog.
 
 - Step 2: Press the green Gitpod button. 
 
-- Step 3: Create a new .env file and put in the below values. 
+- Step 3: If needed, Upgrade pip locally with: pip3 install --upgrade pip
+
+- Step 4: Create a new .env file by typing: touch env.py and put the below values into the file. 
   - os.environ["SECRET_KEY"] = "YOUR_VALUE"
   - os.environ["CLOUDINARY_URL"] = "<YOUR_VALUE>" 
 
-- Step 4: Install all requirements by typing: pip3 install -r requirements.txt into your terminal. 
+- Step 5: Install all requirements by typing: pip3 install -r requirements.txt into your terminal. 
+
+- Step 6: Create the superuser so you can have access to the django admin, follow the steps necessary to set up the username, email and password by running the following management command in your terminal: python manage.py createsuperuser
+
+- Step 7: Start your server by running the following management command in your terminal: python3 manage.py runserver
 
 ![gitpod](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/gitpod.png)
 ### Heroku 

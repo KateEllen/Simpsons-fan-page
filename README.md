@@ -227,6 +227,12 @@ I would like to add a merch page where fans can buy merch from the blog.
 
 
 ## Deployments 
+
+### Local 
+
+- Step 1: Go the git hub repo: https://github.com/KateEllen/Simpsons-fan-page
+- Step 2: Press the green Gitpod button. 
+![gitpod](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/gitpod.png)
 ### Heroku 
 
 The site was deployed to Heroku. The steps to deploy are as follows: 

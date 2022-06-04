@@ -231,7 +231,15 @@ I would like to add a merch page where fans can buy merch from the blog.
 ### Local 
 
 - Step 1: Go the git hub repo: https://github.com/KateEllen/Simpsons-fan-page
+
 - Step 2: Press the green Gitpod button. 
+
+- Step 3: Create a new .env file and put in the below values. 
+  - os.environ["SECRET_KEY"] = "YOUR_VALUE"
+  - os.environ["CLOUDINARY_URL"] = "<YOUR_VALUE>" 
+
+- Step 4: Install all requirements by typing: pip3 install -r requirements.txt into your terminal. 
+
 ![gitpod](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/gitpod.png)
 ### Heroku 
 

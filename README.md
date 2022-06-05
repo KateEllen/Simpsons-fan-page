@@ -238,7 +238,7 @@ I would like to add a merch page where fans can buy merch from the blog.
 
 - Step 4: Create a new .env file by typing: touch env.py and put the below values into the file. 
   - os.environ["SECRET_KEY"] = "YOUR_VALUE"
-  - os.environ["CLOUDINARY_URL"] = "<YOUR_VALUE>" 
+  - os.environ["CLOUDINARY_URL"] = "YOUR_VALUE" 
 
 - Step 5: Install all requirements by typing: pip3 install -r requirements.txt into your terminal. 
 

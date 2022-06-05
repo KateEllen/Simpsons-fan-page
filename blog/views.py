@@ -54,7 +54,7 @@ class AddCommentView(CreateView):
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
         return super().form_valid(form)
-        messages.success(request, 'Comment added!')
+        messages.success = "Comment added!"
 
 
 class CharacterList(ListView):
@@ -75,16 +75,24 @@ class EditCharacterView(UpdateView):
     form_class = CharacterEditForm
     template_name = 'edit_character.html'
 
+    def form_valid(self, form):
+        """
+        Upon success prompt the user with a success message.
+        """
+        messages.success(self.request, "Edit made!")
+        super().form_valid(form)
+        return HttpResponseRedirect(self.get_success_url())
+
     def get_success_url(self, **kwargs):
         return reverse_lazy("character_detail", args=[str(self.object.pk)])
-
 
 @method_decorator(login_required(
     login_url='/accounts/login/'), name='dispatch')
 class DeleteCharacterView(DeleteView):
     model = Characters
     template_name = 'delete_character.html'
-
+    messages_success = 'Character deleted!'
+    
     def get_success_url(self, **kwargs):
         return reverse_lazy("character_list")
 
@@ -93,6 +101,7 @@ class DeleteCharacterView(DeleteView):
         Success message to be displayed after deletion of post.
         Help from multiple stackoverflow posts.
         """
+        messages.success(self.request, self.messages_success)
         return super(DeleteCharacterView, self).delete(request, *args, **kwargs)  # noqa
 
 
@@ -102,8 +111,12 @@ class AddCharactersView(CreateView):
     model = Characters
     form_class = CharacterAddForm
     template_name = 'add_characters.html'
-    messages.success(request, 'Character added!')
+    success_message = "Redirect successfully created!"
     success_url = reverse_lazy('character_list')
+
+    def create(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(AddCharactersView, self).create(request, *args, **kwargs)  # noqa
 
 
 class PostLike(View):
@@ -112,7 +125,6 @@ class PostLike(View):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
-            messages.success(request, 'Character added!')
 
         else:
             post.likes.add(request.user)

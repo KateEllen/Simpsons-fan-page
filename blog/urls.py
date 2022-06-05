@@ -20,7 +20,7 @@ urlpatterns = [
         views.DeleteCharacterView.as_view(),
         name='delete_character'
     ),
-    path('characters/add/', views.AddCharactersView.as_view(), 
+    path('characters/add/', views.AddCharactersView.as_view(),
          name="character_add"
          ),
 

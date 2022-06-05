@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.views import generic, View
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView  # noqa
 from .models import Post, Comment, Characters
 from .forms import CommentForm, CharacterEditForm, CharacterAddForm
 from django.urls import reverse_lazy, reverse
@@ -57,7 +57,6 @@ class AddCommentView(CreateView):
         messages.success(request, 'Comment added!')
 
 
-
 class CharacterList(ListView):
     model = Characters
     queryset = Characters.objects.order_by("name")
@@ -94,7 +93,7 @@ class DeleteCharacterView(DeleteView):
         Success message to be displayed after deletion of post.
         Help from multiple stackoverflow posts.
         """
-        return super(DeleteCharacterView, self).delete(request, *args, **kwargs)
+        return super(DeleteCharacterView, self).delete(request, *args, **kwargs)  # noqa
 
 
 @method_decorator(login_required(
@@ -103,6 +102,7 @@ class AddCharactersView(CreateView):
     model = Characters
     form_class = CharacterAddForm
     template_name = 'add_characters.html'
+    messages.success(request, 'Character added!')
     success_url = reverse_lazy('character_list')
 
 

@@ -111,12 +111,17 @@ class AddCharactersView(CreateView):
     model = Characters
     form_class = CharacterAddForm
     template_name = 'add_characters.html'
-    success_message = "Redirect successfully created!"
-    success_url = reverse_lazy('character_list')
 
-    def create(self, request, *args, **kwargs):
-        messages.success(self.request, self.success_message)
-        return super(AddCharactersView, self).create(request, *args, **kwargs)  # noqa
+    def form_valid(self, form):
+        """
+        Upon success prompt the user with a success message.
+        """
+        messages.success(self.request, "Character made!")
+        super().form_valid(form)
+        return HttpResponseRedirect(self.get_success_url())
+
+    def get_success_url(self, **kwargs):
+        return reverse_lazy("character_detail", args=[str(self.object.pk)])
 
 
 class PostLike(View):

@@ -10,6 +10,10 @@ This project has been created for educational purposes.
 
 This blog is about all things Simpson's. You can read blog posts and comments, and interact once you're a user. 
 
+## Version Control 
+
+Github was used to track the progress of this project. Initial commits were lost as I restarted the project from VScode and then moved into GitPod. As I got more confident, I started checking in more regularly and multiple times a day.  You can see my evolution of more meaningful commit messages at: https://github.com/KateEllen/Simpsons-fan-page/commits/main
+
 ### Wire Frames 
 
 The final result is slightly different as during the development stage the way things were displayed was not as user friendly as expected and I decided to go less minamilistic on the homepage. 

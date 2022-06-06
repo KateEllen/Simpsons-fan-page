@@ -214,6 +214,10 @@ Users can sign up for an account if they do not already have one.
 Users who are logged in can easily log out. 
 ![Sign out](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/signout.png)
 
+- Features include CRUD FUNCTIONALITY messaging:
+Add Page ![Add](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/add.png)
+Edit Page ![Edit](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/edit.png)
+Delete Page ![Delete](https://github.com/KateEllen/Simpsons-fan-page/blob/main/static/media/delete.png)
 
 ## Future Feautures
 

@@ -12,16 +12,6 @@ main {
   min-height: calc(100vh - 370px);
 }
 
-.message-container {
-  text-align: center;
-  padding-left: 0px;
-  background-color: green; 
-  color: white;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 /* donut image */
 .donut-container {
   display: flex;

@@ -86,13 +86,14 @@ class EditCharacterView(UpdateView):
     def get_success_url(self, **kwargs):
         return reverse_lazy("character_detail", args=[str(self.object.pk)])
 
+
 @method_decorator(login_required(
     login_url='/accounts/login/'), name='dispatch')
 class DeleteCharacterView(DeleteView):
     model = Characters
     template_name = 'delete_character.html'
     messages_success = 'Character deleted!'
-    
+
     def get_success_url(self, **kwargs):
         return reverse_lazy("character_list")
 

@@ -12,7 +12,7 @@
                 <div class="col-12 col-md-10 offset-md-1 blogs-posted">
                     <div class="form-group">
                         {% if request.user.is_superuser %}
-                        <form method="post">{% csrf_token %}
+                        <form method="post" action="">{% csrf_token %}
                             <strong><p class="delete_char">Are you sure you want to delete "{{ object }}"?</p></strong>
                             <input class="btn btn-danger" type="submit" value="Confirm">
                         </form>

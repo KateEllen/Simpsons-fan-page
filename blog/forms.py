@@ -12,6 +12,7 @@ class CommentForm(forms.ModelForm):
             'body': forms.Textarea(attrs={'class': 'form-control'}),
         }
 
+
 class CharacterAddForm(forms.ModelForm):
     class Meta:
         model = Characters
@@ -22,6 +23,7 @@ class CharacterAddForm(forms.ModelForm):
             'tag_lines': forms.Textarea(attrs={'class': 'form-control'}),
         }
 
+
 class CharacterEditForm(forms.ModelForm):
     class Meta:
         model = Characters
@@ -31,4 +33,3 @@ class CharacterEditForm(forms.ModelForm):
             'body': forms.Textarea(attrs={'class': 'form-control'}),
             'tag_lines': forms.Textarea(attrs={'class': 'form-control'}),
         }
-

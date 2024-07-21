@@ -13,8 +13,6 @@ class PostAdmin(SummernoteModelAdmin):
 
 
 @admin.register(Comment)
-
 @admin.register(Characters)
-
 class CharacterAdmin(admin.ModelAdmin):
     list_filter = ()

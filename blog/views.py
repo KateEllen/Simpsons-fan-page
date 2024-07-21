@@ -1,13 +1,13 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib import messages
 from django.views import generic, View
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView  # noqa
 from .models import Post, Comment, Characters
 from .forms import CommentForm, CharacterEditForm, CharacterAddForm
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-
 
 
 class HomeView(ListView):
@@ -54,13 +54,13 @@ class AddCommentView(CreateView):
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
         return super().form_valid(form)
+        messages.success = "Comment added!"
 
 
 class CharacterList(ListView):
     model = Characters
     queryset = Characters.objects.order_by("name")
     template_name = "character_list.html"
-    paginate_by = 6
 
 
 class CharacterDetail(DetailView):
@@ -74,7 +74,17 @@ class EditCharacterView(UpdateView):
     model = Characters
     form_class = CharacterEditForm
     template_name = 'edit_character.html'
-    success_url = reverse_lazy("characters")
+
+    def form_valid(self, form):
+        """
+        Upon success prompt the user with a success message.
+        """
+        messages.success(self.request, "Edit made!")
+        super().form_valid(form)
+        return HttpResponseRedirect(self.get_success_url())
+
+    def get_success_url(self, **kwargs):
+        return reverse_lazy("character_detail", args=[str(self.object.pk)])
 
 
 @method_decorator(login_required(
@@ -82,7 +92,18 @@ class EditCharacterView(UpdateView):
 class DeleteCharacterView(DeleteView):
     model = Characters
     template_name = 'delete_character.html'
-    success_url = reverse_lazy("characters_list")
+    messages_success = 'Character deleted!'
+
+    def get_success_url(self, **kwargs):
+        return reverse_lazy("character_list")
+
+    def delete(self, request, *args, **kwargs):
+        """
+        Success message to be displayed after deletion of post.
+        Help from multiple stackoverflow posts.
+        """
+        messages.success(self.request, self.messages_success)
+        return super(DeleteCharacterView, self).delete(request, *args, **kwargs)  # noqa
 
 
 @method_decorator(login_required(
@@ -91,7 +112,17 @@ class AddCharactersView(CreateView):
     model = Characters
     form_class = CharacterAddForm
     template_name = 'add_characters.html'
-    success_url = reverse_lazy('characters_list')
+
+    def form_valid(self, form):
+        """
+        Upon success prompt the user with a success message.
+        """
+        messages.success(self.request, "Character made!")
+        super().form_valid(form)
+        return HttpResponseRedirect(self.get_success_url())
+
+    def get_success_url(self, **kwargs):
+        return reverse_lazy("character_detail", args=[str(self.object.pk)])
 
 
 class PostLike(View):
@@ -100,6 +131,7 @@ class PostLike(View):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
+
         else:
             post.likes.add(request.user)
 
